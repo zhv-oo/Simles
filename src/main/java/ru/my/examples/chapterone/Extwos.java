@@ -38,4 +38,19 @@ public class Extwos {
         }
         return req;
     }
+
+    public int midArrayAndCount(int[] array) {
+        int sum = 0;
+        for (int i : array) {
+            sum += i;
+        }
+        int mid = sum / array.length;
+        int res = 0;
+        for (int i : array) {
+            if (i > mid) {
+                res++;
+            }
+        }
+        return res;
+    }
 }

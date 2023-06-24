@@ -60,4 +60,18 @@ class ExtwosTest {
         int res = extwos.maxAreaRec(1, 1, 100);
         assertThat(res).isEqualTo(1);
     }
+
+    @Test
+    void whenMidArrayAndCountTwo() {
+        Extwos extwos = new Extwos();
+        int res = extwos.midArrayAndCount(new int[] {1, 2, 3, 4, 5, 6});
+        assertThat(res).isEqualTo(3);
+    }
+
+    @Test
+    void whenMidArrayAndCountOne() {
+        Extwos extwos = new Extwos();
+        int res = extwos.midArrayAndCount(new int[] {1, 2, 3, 4, 5});
+        assertThat(res).isEqualTo(2);
+    }
 }
