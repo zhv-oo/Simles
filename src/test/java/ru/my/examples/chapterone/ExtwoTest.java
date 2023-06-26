@@ -1,5 +1,7 @@
 package ru.my.examples.chapterone;
 
+import org.assertj.core.data.Offset;
+import org.assertj.core.data.Percentage;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -73,5 +75,19 @@ class ExtwosTest {
         Extwos extwos = new Extwos();
         int res = extwos.midArrayAndCount(new int[] {1, 2, 3, 4, 5});
         assertThat(res).isEqualTo(2);
+    }
+
+    @Test
+    void whenMaxTriangleGipWhere4and4() {
+        Extwos extwos = new Extwos();
+        double res = extwos.maxTriangleGip(4, 4, 4);
+        assertThat(res).isCloseTo(5.6, Offset.offset(0.1));
+    }
+
+    @Test
+    void whenMaxTriangleGipWhere3and3() {
+        Extwos extwos = new Extwos();
+        double res = extwos.maxTriangleGip(3, 3, 14);
+        assertThat(res).isCloseTo(4.2, Offset.offset(0.1));
     }
 }

@@ -53,4 +53,17 @@ public class Extwos {
         }
         return res;
     }
+
+    public double maxTriangleGip(int min, int max, int size) {
+        int[] a = Library.generateArray(min, max, size);
+        int[] b = Library.generateArray(min, max, size);
+        double res = 0;
+        for (int i = 0; i < size; i++) {
+            int tmp = (int) Math.pow(a[i], 2) + (int) Math.pow(b[i], 2);
+            if (tmp > res) {
+                res = Math.sqrt(tmp);
+            }
+        }
+        return res;
+    }
 }
